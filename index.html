@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<!--Date : 10-10-20-->
+<!--I don't know much.. :( just learning new things..forgive me if it has some syntax error
+This code is registered under MIT License in my github account. 
+I wanted to add a dashboard of top 20 players..but firebase allows me to set it only for a day..if you have clear idea then you can send me a pr on github..I will merge it with the master branch-->
+
+<!--Imgs taken from
+https://www.cleanpng.com/png-clip-art-computer-icons-asteroid-planet-asteroid-2-6375438/preview.html
+Audio taken from(no copyrights required)
+https://youtu.be/mYrKAMLbjYA
+https://youtu.be/q0lsD7U0JSI
+Loader images..
+https://cdn.dribbble.com/users/623359/screenshots/3138869/new
+Rocket-
+https://img.pngio.com/rocket-rocket-clipart-rocket-cartoon-png-and-vector-free-rocket-png-images-260_525.png
+-->
+    <head>
+        <title>Inter-stellar</title>
+        
+    </head>
+    <body>
+        <canvas id="game"></canvas>
+        <button id="start"></button>
+         <div class="Be-positive"></div>
+         <canvas id="work"></canvas>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- Preloader 
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+        
+       <audio controls style=" display:none;" loop   id="music"  
+        
+      src="https://www.mboxdrive.com/theme_01.mp3" id="music" controls="" >
+  <script>
+  var music = document.getElementById("music")
+  
+  document.addEventListener("click", function() {
+  music.play()
+  })
+  
+  -->
+  
+  <audio controls style=" display:none;" loop   id="music"  
+           src="https://www.mboxdrive.com/amadeus-legendary-gOAuL5pELd.mp3"
+            id="music" controls="" >
+
+  <script>
+  var music = document.getElementById("music")
+  
+  document.addEventListener("click", function() {
+  music.play()
+  })
+  $(window).load(function() {
+        // Animate loader off screen
+        $(".Be-positive").fadeOut(8000);
+       // $('.Be-positive').delay(350).fadeOut('slow');
+        /*
+        $(".outline1").fadeIn();
+        $(".Be-positive").fadeOut(Slow);
+        */
+    });
+ function circle (a, b, r) {
+    fuel_2.beginPath();
+    fuel_2.arc(a, b, r, 0, 2*Math.PI);
+    fuel_2.closePath();
+    fuel_2.fill();
+}
+
+function setSize(canv, s, v) {
+    canv.style.width = s + "px",canv.style.height = v + "px";
+    
+    width = s,height = v;
+    
+    canv.width = s*window.devicePixelRatio;
+    canv.height = v*window.devicePixelRatio;
+    
+    canv.getContext("2d").scale (window.devicePixelRatio, window.devicePixelRatio);
+}
+
+function dist(j1, k1, j2, k2) {
+    return Math.sqrt(Math.pow(j1-j2, 2) + Math.pow(k1-k2, 2))
+}
+
+    
+  </script>
+   <!--       https://dl.dropbox.com/s/nbt7tqcacl3nob8/IPL%20theme%20RMX?dl=0"
+      src="https://www.mboxdrive.com/Learn.mp3"-->
+        <div>
+        </div>
+    </body>
+    <img id="rocket" class="0" src="https://img.pngio.com/rocket-rocket-clipart-rocket-cartoon-png-and-vector-free-rocket-png-images-260_525.png" width="100">
+
+    <img id="roll" class="0" src="https://i.ibb.co/dDZSczN/IMG-20200926-010249.jpg" width="100"> 
+    <img id="Energy" class="0" src="https://i.ibb.co/CJq0tDD/Untitled.png" width="100">
+    
+</html>
